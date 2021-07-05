@@ -1,12 +1,12 @@
-import React from 'react'
-import CharacterCard from './CharacterCard';
+import React from 'react';
+import WordCard from './WordCard';
 
 const word = "Hello";
 function App() {
   return (
     <div>
     {
-    Array.from(word).map((c, i) => <CharacterCard value={c} key={i}/>)
+    <WordCard value = {word}/>
     }
     </div>
   );
