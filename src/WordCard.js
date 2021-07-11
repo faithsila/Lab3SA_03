@@ -1,14 +1,15 @@
 import React, { useState,} from 'react';
 import _ from 'lodash';
-
 import CharacterCard from './CharacterCard';
-import { attempt } from 'bluebird';
+
 
 
 const prepareStateFromWord = given_word =>{
     let word = given_word.toUpperCase()
     let chars = _.shuffle(Array.from(word))
+    let time = 0
     return {
+        time,
         word,
         chars,
         attempt : 1,
@@ -32,8 +33,14 @@ export default function WordCard(props){
              setState({...state,completed: true})
          }
          else if(guess != state.word){
+             state.time++;
              console.log('reset, next attempt')
              setState({...state, guess: '',attempt: state.attempt + 1})
+             
+             if(state.time == 3){
+             console.log('You lose')
+             setState({...state, completed: true})
+             }
          }
      }
  }
