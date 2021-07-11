@@ -9,6 +9,10 @@
    }
 
 .activeCard {
+    color: rgb(21, 255, 0);
+    background: rgb(192, 255, 195);
+   }
+.nonactiveCard{
     color: red;
     background: pink;
-   }
+}
