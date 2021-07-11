@@ -37,7 +37,10 @@ export default function WordCard(props){
              console.log('reset, next attempt')
              setState({...state, guess: '',attempt: state.attempt + 1})
              
-             if(state.time == 3){
+             if (state.time == 2){
+                console.log('Hint : it mean like Hi.')
+             }
+             else if(state.time == 3){
              console.log('You lose')
              setState({...state, completed: true})
              }
