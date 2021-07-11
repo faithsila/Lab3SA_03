@@ -41,8 +41,8 @@ export default function WordCard(props){
                 console.log('Hint : it mean like Belive.')
              }
              else if(state.time == 3){
-                 console.log(state.word[0])
-                 console.log(state.word[3])
+                 console.log('1st letter'state.word[0])
+                 console.log('4th letter'state.word[3])
              }
              else if(state.time == 5){
              console.log('You lose')
